@@ -1,0 +1,189 @@
+body, html
+{
+    font-family: 'Poppins', sans-serif !important;
+	background-color:#f5f6f7 !important;
+	height: 100%;
+}
+
+h1, .latest
+{
+	color: orange !important;
+}
+
+.staff-content
+{
+    margin-bottom:0;
+}
+
+form
+{
+	border : none;
+	border-radius: 25px;
+	margin: 20px;
+	padding: 20px;
+	width: 25%;
+	height: 35%;
+}
+
+a
+{
+	color: orange !important;
+}
+
+
+.logIn, .signUp
+{
+    font-size:24px;
+}
+
+input:focus
+{
+	border-color: orange !important;
+}
+
+.button
+{
+	background-color : orange;
+	border : none;
+	margin-top: 20px;
+	padding: 15px 32px;
+	text-align: center;
+	color: white;
+}
+
+.button:hover, .button:active
+{
+    background-color : white;
+	border : 1px solid orange;
+	margin-top: 20px;
+	padding: 15px 32px;
+	text-align: center;
+	color: orange;
+	transition: 0.10s ease-in-out;
+}
+
+.menu-item
+{
+    font-size:24px;
+}
+
+.label
+{
+    color: orange;
+}
+
+.button.active
+{
+    background-color:white;
+    color:orange;
+}
+
+.submit
+{
+	background-color: orange;
+	border : none;
+	text-align: center;
+	color: white;
+	padding: 12px 29px;
+}
+
+
+.avatar
+{
+	margin-top: 15px;
+}
+
+.content
+{
+	max-width: 700px;
+	margin:auto;
+}
+
+
+.form
+{
+	max-width: 300px;
+	clear: both;
+}
+
+form.editor
+{
+    width:80%;
+    height:80%;
+}
+
+nav
+{
+	padding-bottom: -100px !important;
+}
+
+.background
+{
+	color: white !important;
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../icons/bckgrnd.jpg');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom:21px;
+}
+
+.header-log_in
+{
+    display:flex;
+    justify-content:space-around;
+}
+
+footer
+{
+	margin-top: 40%;
+}
+
+.chat-bg
+{
+	background: #676363 !important;
+}
+
+.align-right
+{
+	margin-left: auto;
+}
+
+.user-link
+{
+    text-decoration:underline;
+    color:black !important;
+}
+
+.datas
+{
+    font-size:24px;
+    color:black;
+    text-decoration:bold;
+}
+
+.footer-element
+{
+	display: flex;
+}
+
+.article-options
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.carousel-item img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.carousel
+{
+	margin-top: 10% !important;
+	max-width: 700px;
+	margin:auto;
+}
+
