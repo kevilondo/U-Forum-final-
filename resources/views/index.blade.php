@@ -20,32 +20,34 @@
                 <h3 class="latest">-Messages from staff-</h3>
 
                 @foreach ($staff_messages as $staff_message)
-                    <div class="col-md-10">
-                        <div class="uk-card uk-card-large uk-card-hover uk-card-default">
-                            <div class="uk-card-header">
-                                <h3> {{$staff_message->staff->first_name. " ". $staff_message->staff->surname}} </h3>
+                    @if ($staff_message->university == auth()->user()->university)
+                        <div class="col-md-10">
+                            <div class="uk-card uk-card-large uk-card-hover uk-card-default">
+                                <div class="uk-card-header">
+                                    <h3> {{$staff_message->staff->first_name. " ". $staff_message->staff->surname}} </h3>
+                                </div>
+
+                                <div class="uk-card-body">
+                                    {{$staff_message->message}}
+
+                                </div>    
+
+                                    @if ($staff_message->file !== null || $staff_message->file !== 'none')
+                                        <div class="container">
+                                            <p> <a href="/storage/staff_files/{{$staff_message->file}}">Click here to open file</a> </p>
+                                        </div>
+                                    @endif
+                                
+
+                                <div class="uk-card-footer">
+                                    <b> {{date('d-M-Y H:i', strtotime($staff_message->created_at))}} </b> <br>
+                                </div>
+                                <div style="text-align: right">
+                                    <a href="/staff_message/{{$staff_message->id}}">Comment</a>
+                                </div>
                             </div>
-
-                            <div class="uk-card-body">
-                                {{$staff_message->message}}
-
-                            </div>    
-
-                                @if ($staff_message->file !== null || $staff_message->file !== 'none')
-                                    <div class="container">
-                                        <p> <a href="/storage/staff_files/{{$staff_message->file}}">Click here to open file</a> </p>
-                                    </div>
-                                @endif
-                            
-
-                            <div class="uk-card-footer">
-                                <b> {{date('d-M-Y H:i', strtotime($staff_message->created_at))}} </b> <br>
-                            </div>
-                            <div style="text-align: right">
-                                <a href="/staff_message/{{$staff_message->id}}">Comment</a>
-                            </div>
-                        </div>
-                    </div> <br>
+                        </div> <br>
+                    @endif
                 @endforeach
             </div>
         @endif

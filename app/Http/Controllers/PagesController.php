@@ -22,7 +22,7 @@ class PagesController extends Controller
     public function index()
     {
         //fetch articles that have been published 
-        $articles = Article::Where('accepted', '1')->orderBy('updated_at', 'desc')->paginate(2); 
+        //$articles = Article::Where('accepted', '1')->orderBy('updated_at', 'desc')->paginate(2); 
 
         //we want to fetch all the users, books and topics in the db and count them for the admin's dashboard
 
@@ -36,7 +36,7 @@ class PagesController extends Controller
 
         $latest_books = Bookstore::orderBy('created_at', 'desc')->get()->take(5);
 
-        $latest_topics = Topic::orderBy('created_at', 'desc')->get()->take(2);
+        $latest_topics = Topic::orderBy('created_at', 'desc')->get()->take(4);
 
         //display all the other users if the user is not logged in, otherwise we will only display the users in the same university
         if (!Auth::guest())
