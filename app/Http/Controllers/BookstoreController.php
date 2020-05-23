@@ -98,6 +98,10 @@ class BookstoreController extends Controller
 
                 $url = "https://uforum.co.za/bookstore";
 
+                $topic_title = $request->input('title');
+
+                $topic_message = $request->input('description');
+
                 $data = [
 
                     'user_email' => $user_email,
@@ -105,6 +109,10 @@ class BookstoreController extends Controller
                     'name' => $name,
 
                     'message' => $message,
+
+                    'topic_title' => $topic_title,
+
+                    'topic_message' => $topic_message,
 
                     'url' => $url,
                 ];

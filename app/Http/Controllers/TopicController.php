@@ -102,7 +102,7 @@ class TopicController extends Controller
 
                 $topic_title = $request->input('title');
 
-                $topic_message = $topic->message = $request->input('message');
+                $topic_message = $request->input('message');
                 
                 $data = [
 

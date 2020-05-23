@@ -205,6 +205,10 @@ class InboxController extends Controller
             'message' => $message,
 
             'url' => $url,
+
+            'topic_title' => 'You have a new message',
+
+            'topic_message' => $message,
         ];
 
         event(new SendEmailEvent($data));
@@ -286,6 +290,8 @@ class InboxController extends Controller
                     'message' => $message,
         
                     'url' => $url,
+
+                    'topic_title' => 'You have a new message',
 
                     'topic_message' => $message,
                 ];
