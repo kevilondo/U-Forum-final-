@@ -62,7 +62,11 @@
 
                     <div class="uk-card uk-card-default uk-card-hover mt-3">
                         @foreach ($rand_users as $rand_user)
-                            <p> <img src="/storage/avatar/{{$rand_user->avatar}}" height="70px" width="70px" class="rounded-circle"> <b> {{$rand_user->name. " ". $rand_user->surname}} </b> <a href="/chat/{{$rand_user->id}}" style="color:black !important;"> <span class="ml-3"> <img src="/assets/inbox.png" width="30px" height="30px"> </span> </a> </p>
+                            <p> <img src="/storage/avatar/{{$rand_user->avatar}}" height="70px" width="70px" class="rounded-circle"> <b> {{$rand_user->name. " ". $rand_user->surname}} </b>
+                                @if (!Auth::guest() && $rand_user->id !== auth()->user()->id)
+                                    <a href="/chat/{{$rand_user->id}}" style="color:black !important;"> <span class="ml-3"> <img src="/assets/inbox.png" width="30px" height="30px"> </span> </a>
+                                @endif
+                            </p>
                         @endforeach
                     </div>
                         
