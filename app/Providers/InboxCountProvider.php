@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Http\Controllers\InboxController;
 
+use Illuminate\Support\Facades\View;
+
 class InboxCountProvider extends ServiceProvider
 {
     /**

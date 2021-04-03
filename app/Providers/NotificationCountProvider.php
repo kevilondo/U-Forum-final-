@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Http\Controllers\NotifController;
 
+use Illuminate\Support\Facades\View;
+
 class NotificationCountProvider extends ServiceProvider
 {
     /**
