@@ -1,8 +1,5 @@
 <?php
 
-use App\Http\Controllers\NotifController;
-use App\Http\Controllers\InboxController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,29 +54,6 @@ Route::get('/chat/{id}', 'InboxController@chat');
 Route::post('/chat/{id}', 'InboxController@send_message');
 
 Route::post('/files/{id}', 'InboxController@send_files');
-
-//view composer
-
-View::composer(['inc.navbar'], function($view){
-    $notifications = new NotifController;
-    $notifCount = $notifications->notifCount();
-
-    $view->with('notifCount', $notifCount);
-});
-
-View::composer(['inc.staffnavbar'], function($view){
-    $notifications = new NotifController;
-    $notifCount = $notifications->notifCount();
-
-    $view->with('notifCount', $notifCount);
-});
-
-View::composer(['inc.navbar'], function($view){
-    $messages = new InboxController;
-    $messagesCount = $messages->messagesCount();
-
-    $view->with('messagesCount', $messagesCount);
-});
 
 Route::post('/register/fetch', 'CourseController@fetch')->name('CourseController.fetch');
 
