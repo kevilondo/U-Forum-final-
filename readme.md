@@ -1,3 +1,27 @@
+<h1>About this Project</h1>
+
+<p> This is a social platform that I created when I was getting started with Laravel. </p>
+
+<p> This is a social platform where students could post stuff, sell textbooks and stationery. chat and post videos. </p>
+
+<b> The code might look a little bit crappy but as I said earlier, I was a beginner in Laravel and I wasn't really familiar with the framework </b>
+
+<h1>Steps to install it locally</h1>
+
+<p> After cloning it, rename <b>.env.example </b> to <b>.env</b> </p>
+
+<p> Create a database on your local server and change the details on the <b> .env file </b> </p>
+
+<p> Use the <b> composer update </b> command to install the necessary packages </p>
+
+<p> Use the <b> npm install </b> command to install the Node modules </p>
+
+<p> Use the <b> php artisan key:generate </b> command to generate a key for the app </p>
+
+<p> Use the <b> php artisan migrate </b> command to migrate all the tables to the database you created </p>
+
+<p> Use the <b> php artisan serve </b> command to start the local server and play around with the app! </p>
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
